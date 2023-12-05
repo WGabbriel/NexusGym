@@ -1,0 +1,751 @@
+/* IMPORTANDO FONTS VIA URL */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato:wght@900&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;800;900&display=swap');
+/* IMPORTANDO FONT VIA CAMINHO - FONTE BAIXADA*/
+@font-face {
+    font-family: 'king_and_queen';
+    src: url(/assets/font/LTCushion-Bold.ttf) format('truetype');
+}
+/* CRIANDO VARIÁVEIS DE COR  */
+html {
+    --preto: #000000;
+    --cinza: #aaaaaa;
+    --cinza-escuro: #161616;
+    --vermelho-claro: #df1c26;
+    --vermelho-escuro: #92171e;
+    --branco: #FFFFFF;
+    --branco-escuro: #dadada;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--cinza-escuro);
+    height: 6rem;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin-left: 0.5rem;
+    color: var(--vermelho-claro);
+    font-family: Arvo;
+    font-size: 45px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.icones-direita {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    position: absolute;
+    right: 0;
+}
+
+.icones-direita a {
+    cursor: default;
+}
+
+.icone-user {
+    width: 2rem;
+    height: 2rem;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.icone-sair {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84vh;
+}
+
+.segunda-sec {
+    margin-left: -3rem;
+}
+
+.primeira-sec,
+.segunda-sec,
+.terceira-sec {
+    display: inline-block;
+    margin-top: 2rem;
+
+}
+
+.section-menores {
+    display: flex;
+    flex-direction: column;
+}
+
+.quarta-sec {
+    display: flex;
+
+}
+
+.quinta-sec {
+    margin-top: 2rem;
+}
+
+.titulo {
+    position: relative;
+    top: 27rem;
+    border-radius: 5px;
+    background-color: #92171db6;
+    padding: 1rem 2rem;
+    width: 25rem;
+    text-align: center;
+}
+
+.titulo h3,
+.titulo-modelo-2 h3,
+.titulo-modelo-3 h3 {
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter',sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.titulo-modelo-2 {
+    background-color: #92171db6;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    top: 20.5rem;
+    border-radius: 5px;
+}
+
+.titulo-modelo-3 {
+    margin-top: 2rem;
+    background-color: #92171db6;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    top: 20.5rem;
+    border-radius: 5px;
+}
+
+.treinos {
+    background: url(../img/treinos.png);
+    width: 25rem;
+    height: 49rem;
+    box-shadow: 0px 0px 10px rgba(48, 47, 47, 0.473);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dietas {
+    margin-left: 5rem;
+    background: url(../img/dieta.png);
+    background-size: 40rem;
+    width: 25rem;
+    height: 49rem;
+    box-shadow: 0px 0px 10px rgba(48, 47, 47, 0.473);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.natacao {
+    margin-left: 2rem;
+    background: url(../img/natacao.png);
+    background-size: 27rem;
+    width: 23rem;
+    height: 23.5rem;
+    box-shadow: 0px 0px 10px rgba(48, 47, 47, 0.473);
+}
+
+.personais {
+    margin-left: 2rem;
+    background: url(../img/personais.png);
+    background-size: 27rem;
+    width: 23rem;
+    height: 23.5rem;
+    box-shadow: 0px 0px 10px rgba(48, 47, 47, 0.473);
+}
+
+
+.aerobicos {
+    margin-left: 2rem;
+    background: url(../img/aerobico.png);
+    background-size: 28rem;
+    width: 23rem;
+    height: 23.5rem;
+    box-shadow: 0px 0px 10px rgba(48, 47, 47, 0.473);
+}
+
+.planos {
+    margin-left: 2rem;
+    background: url(../img/planos.png);
+    background-size: 35rem;
+    width: 23rem;
+    height: 23.5rem;
+    box-shadow: 0px 0px 10px rgba(48, 47, 47, 0.473);
+    position: relative;
+}
+
+.img2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    height: 23.5rem;
+    width: 23rem;
+}
+
+.img2 img {
+    width: 8rem;
+}
+
+
+.treinos,
+.dietas,
+.natacao,
+.personais,
+.aerobicos,
+.planos {
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.treinos:hover,
+.dietas:hover,
+.natacao:hover,
+.personais:hover,
+.aerobicos:hover,
+.planos:hover {
+    transform: scale(1.044);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* PAGINA DE TREINOS */
+
+.body-inf-sup {
+    overflow: hidden;
+}
+
+#main-treinos {
+    background: url(../assets/img/mulher-atleta-pgi.jpg);
+    background-size: cover;
+    height: 89.8vh;
+    overflow: hidden;
+}
+
+
+
+iframe {
+    width: 100%;
+    border: none;
+    height: 89.8vh;
+    overflow: hidden;
+}
+
+/* PÁGINA DE SUPERIORES E INFERIORES */
+.main-inf-sup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    width: 200vh;
+    height: 100vh;
+
+}
+
+table {
+
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: var(--vermelho-claro);
+    border-collapse: collapse;
+    width: 150vh;
+    height: 90vh;
+    color: white;
+
+}
+
+
+tr,
+td {
+    background-color: var(--vermelho-escuro);
+    padding: 0.55rem 0.5rem;
+}
+
+
+td h4 {
+    width: 16rem;
+    text-align: center;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+th {
+    border-radius: 8px;
+    padding: 0;
+    background-color: #DF1C26;
+    font-size: 2rem;
+    font-family: Montserrat;
+    letter-spacing: 2px;
+}
+
+tr {
+    font-family: 'Inter';
+    font-weight: 500;
+}
+
+
+/* TELA DE PAGAMENTO */
+.container-comum {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    width: 50rem;
+    width: 55rem;
+    background-color: #161616;
+    border-radius: 15px;
+    position: relative;
+}
+
+div.titulo-pag {
+    display: flex;
+    margin: 3rem auto;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #111010;
+    padding: 0.1rem;
+    height: 4rem;
+}
+
+.titulo-pag h1 {
+    color: white;
+    font-family: Montserrat;
+    font-weight: 900;
+}
+
+section {
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.titulo-pag span {
+    color: var(--vermelho-claro);
+}
+
+.imagem-pix img {
+    display: block;
+    margin: 0 auto;
+    width: 10rem;
+    height: 10rem;
+}
+
+.form-pag {
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+input[type="submit"] {
+    margin: 2rem;
+    padding: 1rem 4rem;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--vermelho-escuro);
+    cursor: pointer;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--vermelho-claro);
+}
+
+h4 {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    padding: 1rem 0rem;
+}
+
+.vermelho {
+    color: var(--vermelho-claro);
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-family: Montserrat;
+    padding-bottom: 1rem;
+}
+
+/* PÁGINA DE AERÓBICOS */
+.imagem-home {
+    position: absolute;
+    top: 0;
+    margin-top: 6.5rem;
+    margin-left: 0.5rem;
+    left: 0;
+    height: 4rem;
+    width: 4rem;
+}
+
+.main-pages {
+    height: 89.8vh;
+    color: var(--branco-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#natacao {
+    background: url('../img/pagina-natacao-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+#aerobicos {
+    background: url('../img/pagina-aerobico-bg.jpg');
+    background-size: cover;
+    background-position: top center;
+}
+
+#profissionais {
+    background: url('../img/pagina-profissionais-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+#dieta {
+    background: url('../img/pagina-dieta-bg.jpg');
+    background-size: cover;
+    background-position: top center;
+}
+
+#dieta h2 {
+    top: 9rem;
+}
+
+#dieta {
+    display: flex;
+    flex-direction: column;
+}
+
+#dieta .p-pages {
+    font-size: 2rem;
+    position: relative;
+    top: -2rem;
+}
+
+#dieta a {
+    display: flex;
+    align-self: start;
+    margin-left: 12rem;
+    padding: 1rem 4rem;
+    border-radius: 8px;
+    background-color: var(--vermelho-escuro);
+    cursor: pointer;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#dieta a:hover {
+    background-color: var(--vermelho-claro);
+}
+
+.main-pages h2 {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    padding: 1rem 2rem 1rem 12rem;
+    letter-spacing: 2px;
+    background-color: var(--cinza-escuro);
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+
+}
+
+.main-pages .p-pages {
+    display: inline;
+    margin: inherit;
+    position: inherit;
+    text-align: inherit;
+    width: 80%;
+    color: white;
+    font-size: 2.75rem;
+    font-weight: 600;
+}
+
+span {
+    color: var(--vermelho-claro);
+}
+
+
+/* PÁGINA DE CONTATO */
+#main-cont {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-cont {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: var(--cinza-escuro);
+    width: 35rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.titulo-cont {
+    position: absolute;
+    top: 0;
+    margin-top: 1rem;
+    color: var(--vermelho-escuro);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.input {
+    display: block;
+    padding: 1rem 0.5rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    border: 3px solid #4A4A4A;
+    border-radius: 7.5px;
+    font-size: 16px;
+    color: #ffffff;
+    outline: none;
+    background-color: transparent;
+    transition: all .2s ease;
+    box-sizing: border-box;
+}
+
+.buton-cont {
+    background-color: var(--vermelho-escuro);
+    border-radius: 5px;
+    padding: 1.2rem;
+    width: 80%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(32, 32, 32, 0.56);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all .2s ease;
+    color: white;
+}
+
+.buton-cont:hover {
+    background-color: var(--vermelho-claro);
+    transform: scale(1.015);
+}
+
+
+@media screen and (min-width: 1366px) and (max-width: 1599px) {
+
+    nav {
+        height: 6rem;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+
+    .icones-direita {
+        display: flex;
+        align-items: center;
+        margin-right: 3rem;
+        position: absolute;
+        right: 0;
+    }
+
+    .icone-user {
+        width: 2rem;
+        height: 2rem;
+        margin: 2rem;
+    }
+
+    .titulo {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        position: relative;
+        top: 10rem;
+    }
+
+    .primeira-sec,
+    .segunda-sec,
+    .terceira-sec,
+    .quinta-sec {
+        margin-top: 0.5rem;
+
+    }
+
+    .titulo-modelo-2,
+    .titulo-modelo-3 {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        position: relative;
+        top: 11rem;
+    }
+
+    .treinos {
+        width: 15rem;
+        height: 30rem;
+        background-size: 20rem;
+    }
+
+    .dietas {
+        margin-left: 5rem;
+        background-size: 20rem;
+        width: 15rem;
+        height: 30rem;
+    }
+
+    .natacao {
+        margin-left: 2rem;
+        background-size: 17rem;
+        width: 15rem;
+        height: 14rem;
+
+    }
+
+    .personais {
+        margin-left: 2rem;
+        background-size: 17rem;
+        width: 15rem;
+        height: 14rem;
+    }
+
+    .planos {
+        margin-left: 2rem;
+        background-size: 17rem;
+        width: 15rem;
+        height: 14rem;
+    }
+
+    .aerobicos {
+        margin-left: 2rem;
+        background-size: 15rem;
+        width: 15rem;
+        height: 14rem;
+    }
+
+    .img1,
+    .img2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+
+    }
+
+    .img1 {
+        width: 15rem;
+        height: 30rem;
+    }
+
+    .img2 {
+        height: 15em;
+        width: 14rem;
+    }
+
+    .img1 img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+    }
+
+    .img2 img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+    }
+
+    /* AEROBICOS, NATACAO, PROFISSIONAIS  */
+    .main-pages .p-pages {
+        margin-top: 3rem;
+        width: 80%;
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    /*DIETA*/
+    #dieta a{
+        margin-top: 2rem;
+        margin-left: 8.5rem;
+    }
+    #dieta h2 {
+        top: 7.5rem;
+    }
+
+    #dieta .p-pages {
+        font-size: 1.5rem;
+        position: relative;
+        top: 2rem;
+    }
+
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Gym</title>
+     <link rel="stylesheet" href="assets/css/style.css"> <!-- Está dizendo ao navegador para usar um arquivo chamado "style.css" que está localizado na pasta "assets/css" para estilizar a página  -->
+     <link rel="shortcut icon" href="./assets/img/teste.svg" type="image/x-icon"> <!-- Define o ícone que aparece na aba do navegador quando alguém acessa a página -->
+</head>
+
+<body>
+    <header>
+       <nav class="nav-bar section">  <!-- cria uma barra de navegação (menu)-->
+            <div>
+                <a href="#" class="logo">
+                    <img src="assets/img/teste.svg" alt="logo de um lobo vermelho">
+                    <h1>NEXUS </h1>
+                </a>
+            </div>
+            <div class="navegacao">
+                <ul>
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#sobre">Sobre nós</a></li>
+                    <li class="nav-item"><a href="#modalidades">Modalidades</a></li>
+                    <li class="nav-item"><a href="#planos">Planos</a></li>
+                    <li class="nav-item caixa-area-cliente"><a href="php/pagina_inicial.php">ÁREA DO CLIENTE</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro section">
+            <div class="esquerda-intro">
+                <div class="introducao-intro">
+                    <h1 id="slogan-home"><span>Conexões fortes, corpos fortes </span><span>Nexus Gym</span>.</h1>
+
+                    <p id="slogan2-home">Se você deseja alcançar mudanças, comece em si mesmo, e lembre que seu esforço
+                        determina o seu progresso! </p>
+
+                    <div class="junte-se">
+                        <a href="php/cadastro_usuario.php">
+                            <p> Junte-se a nós </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="apresentacao-de-titulos">
+                    <div class="apresentacao-de-titulos-item">
+                        <div class="font-size-grande">1000<span>+</span></div>
+                        <p>Clientes satisfeitos</p>
+                    </div>
+                    <div class="apresentacao-de-titulos-item">
+                        <div class="font-size-grande">20<span>+</span></div>
+                        <p>Unidades</p>
+                    </div>
+                    <div class="apresentacao-de-titulos-item">
+                        <div class="font-size-grande">100<span>+</span></div>
+                        <p>Programas de treino</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img-intro">
+                <div class="bola-vermelha"></div>
+                <img src="assets/img/mulhernexusgym.png" alt="Mulher segurando halteres">
+            </div>
+        </section>
+
+        <section class="segunda-section sobre section" id="sobre">
+
+            <div class="caixa-sobre-nos">
+                <h1>SOBRE NÓS</h1>
+                <p>Conheça-nos!</p>
+
+                <div>
+                    <p>
+                        A Nexus Gym é uma academia comprometida em promover a saúde e o bem-estar de seus membros.
+                        Oferecemos serviços abrangentes, incluindo treinamento personalizado, aulas em grupo e
+                        instalações de última geração. Acreditamos em uma abordagem holística para a saúde,
+                        incluindo
+                        nutrição e bem-estar mental. Nossa comunidade de membros é acolhedora e solidária, e juntos
+                        buscamos o progresso e a amizade.<br>
+                        Nossa localização:<br>
+                        Praça das Quimeras, nº 73, bairro Minivaldo, na cidade Anitta, CH.<br>
+                        CEP: 54321-098<br><span> Seja bem-vindo à Nexus Gym para iniciar sua
+                            jornada
+                            em direção
+                            a uma vida mais saudável.</span>
+                    </p>
+                </div>
+            </div>
+
+            <figure class="justify-content-end align-items-center">
+                <img src="./assets/img/academia_teste.png" alt="Imagem da Academia Nexus Gym">
+            </figure>
+
+        </section>
+
+        <section class="terceira-section section" id="modalidades">
+            <h1>Modalidades</h1>
+            <p>Conheça nossas modalidades</p>
+            <div>
+                <div class="conteudo-terceira-section">
+
+                    <div class="card">
+                        <div class="img" id="img-1">
+
+                        </div>
+                        <div class="span">
+                            <span class="title">DESCRIÇÃO</span>
+                            <p class="desc">É uma forma de atividade física que envolve o uso contínuo de oxigênio para
+                                fornecer energia ao corpo. Ele é caracterizado por movimentos repetitivos de baixa
+                                intensidade que podem ser mantidos por longos períodos, como correr, nadar, andar de
+                                bicicleta ou dançar.
+
+                            </p>
+                        </div>
+                        <div class="titulo">
+                            <span>AEROBICO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="conteudo-terceira-section">
+                    <div class="card">
+                        <div class="img" id="img-2">
+
+                        </div>
+                        <div class="span">
+                            <span class="title">DESCRIÇÃO</span>
+                            <p class="desc">É um exercício praticado na água que oferece diversos benefícios, incluindo
+                                o
+                                fortalecimento dos músculos, o desenvolvimento da resistência cardiovascular, a melhoria
+                                da
+                                flexibilidade e a redução do impacto nas articulações.</p>
+                        </div>
+                        <div class="titulo">
+                            <span>NATAÇÃO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="conteudo-terceira-section">
+                    <div class="card">
+                        <div class="img" id="img-3">
+
+                        </div>
+                        <div class="span">
+                            <span class="title">DESCRIÇÃO</span>
+                            <p class="desc">É esporte e uma forma de exercício físico que envolve uma combinação de
+                                movimentos aeróbicos e anaeróbicos. É um esporte de combate no qual os participantes
+                                trocam
+                                socos com o objetivo de marcar pontos ou nocautear o oponente. </p>
+                        </div>
+                        <div class="titulo">
+                            <span>BOXE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="conteudo-terceir-section">
+                    <div class="card">
+                        <div class="img" id="img-4">
+                        </div>
+                        <div class="span">
+                            <span class="title">DESCRIÇÃO</span>
+                            <p class="desc">A musculação é uma forma de exercício que envolve o levantamento de pesos e
+                                o
+                                uso de máquinas de resistência para fortalecer e tonificar os músculos. É uma atividade
+                                de
+                                alta intensidade que visa o desenvolvimento muscular.</p>
+                        </div>
+                        <div class="titulo">
+                            <span>MUSCULAÇÃO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quarta-section section">
+
+
+            <div class="direita-quarta-section">
+                <h2>Por que as pessoas nos escolhem?</h2>
+                <div>
+                    <div class="item-direita-quarta-section">
+                        <img src="assets/img/medalha.png" alt="Ícone de medalha">
+                        <h3>Experiência e Orientação</h3>
+                        <p>Na NexusGym, nossa equipe fe treinadores certificados traz para a mesa anos de experiência e
+                            paixão pelo fitness</p>
+                    </div>
+                    <div class="item-direita-quarta-section">
+                        <img src="assets/img/relogio.png" alt="Ícone de relógio">
+                        <h3>Horários flexíveis de ginástica</h3>
+                        <p>Oferecemos horários estendidos e opções de acesso 24 horas por dia. 7 dias por semana, para
+                            que você possa se exercitar de acordo com sua programação</p>
+                    </div>
+                    <div class="item-direita-quarta-section">
+                        <img src="assets/img/halter.png" alt="Ícone de halter">
+                        <h3>Exercícios Personalizados</h3>
+                        <p>Nossos treinadores trabalharão em estreita colaboração com voc~e para criar um plano de
+                            treino personalizado para seu nível de condicionamento físico e programação</p>
+                    </div>
+                </div>
+                <div class="junte-se">
+                    <a href="php/cadastro_usuario.php">
+                        <p> Junte-se agora </p>
+                    </a>
+                </div>
+            </div>
+            <div class="esquerda-quarta-section">
+                <div class="bola-vermelha3"></div>
+                <img src="assets/img/mulherbasquete.png"
+                    alt="Mulher atlética de roupa vermelha segurando uma bola de basquete">
+            </div>
+        </section>
+
+        <section class="quinta-section" id="planos">
+            <h1>PLANOS</h1>
+            <p>VENHA FAZER PARTE DA NEXUS!</p>
+            <div class="plano-card">
+                <div class="titulo-quinta-section">
+                    <h2>PLANO BASICO</h2>
+                    <h3><span>R$</span>65,99</h3>
+                    <p>P/MÊS</p>
+                </div>
+                <div class="conteudo-quinta-section">
+                    <div>
+                        <p><span>&#10004;</span> Acesso ilimitado à área de musculação.</p>
+                        <p><span>&#10004;</span> Participação em aulas de aeróbica 3 vezes por semana.
+                        </p>
+                        <p><span>&#10008;</span> Acesso à piscina.
+                        </p>
+                        <p><span>&#10008;</span> Acesso às aulas de boxe.</p>
+                        <p><span>&#9679;</span> Acesso ao horário de pico pode estar sujeito a restrições.</p>
+                    </div>
+                    <a href="./php/tela_pag65.php"><input type="submit" value="COMPRAR" id="btn-1"></a>
+                </div>
+
+            </div>
+            <div class="plano-card">
+                <div class="bola-vermelha2"></div>
+                <div id="tituloprincipal-quinta-section">
+                    <h2>PLANO PLUS</h2>
+                    <h3><span>R$</span>75,99</h3>
+                    <p>P/MÊS</p>
+                </div>
+                <div class="conteudo-quinta-section">
+                    <div>
+                        <p><span>&#10004;</span> Acesso ilimitado à área de musculação.</p>
+                        <p><span>&#10004;</span> Acesso ilimitado às aulas de aeróbica.</p>
+                        <p><span>&#10004;</span> Acesso ilimitado às aulas de natação.</p>
+                        <p><span>&#10004;</span> Acesso a 2 aulas de boxe por semana.</p>
+                        <p><span>&#9679;</span> Acesso á qualquer horário</p>
+                    </div>
+                    <a href="./php/tela_pag75.php"><input type="submit" value="COMPRAR" id="btn-2"></a>
+                </div>
+            </div>
+            <div class="plano-card">
+                <div class="titulo-quinta-section">
+                    <h2>PLANO ESTUDANTE</h2>
+                    <h3><span>R$</span>55,99</h3>
+                    <p>P/MÊS</p>
+                </div>
+                <div class="conteudo-quinta-section">
+                    <div>
+                        <p><span>&#10004;</span>Uso da academia durante o horário regular.</p>
+                        <p><span>&#10004;</span>Acesso a 2 aulas de boxe por semana.</p>
+                        <p><span>&#10004;</span>Acesso ilimitado à área de musculação.</p>
+                        <p><span>&#10004;</span>2 aulas de aeróbicos por semana.</p>
+                        <p><span>&#9679;</span>Necessita da comprovação de matrícula.</p>
+                    </div>
+                    <a href="./php/tela_pag55.php"><input type="submit" value="COMPRAR" id="btn-3"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="conteudo-footer">
+            <ul>
+                <li>
+                    <h3>CATEGORIAS</h3>
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#modalidades">Modalidades</a></li>
+                <li><a href="php/pagina_inicial.php">Area do cliente</a></li>
+            </ul>
+            <ul>
+                <li><img src="./assets/img/logo.svg" alt="Logo branca da academia Nexus Gym"></li>
+                <li>
+                    <h2>NEXUS GYM</h2>
+                </li>
+            </ul>
+            <ul id="ul-2">
+                <li>
+                    <h3>SUPORTE</h3>
+                </li>
+                <li><a href="./html/contato.php">Contatos</a></li>
+                <li><a href="./assets/Termos.pdf" download>Termos e condições</a></li>
+                <li><a href="/php/cadastro_usuario.php">Registre-se</a></li>
+                <li><a href="./assets/Manual.pdf" download>Manual do usuário</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

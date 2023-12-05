@@ -1,0 +1,345 @@
+/*Importando fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato:wght@900&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+@font-face {
+    font-family: 'king_and_queen';
+    src: url(/assets/font/LTCushion-Bold.ttf) format('truetype');
+}
+
+/* CRIANDO VARIAVEIS DE COR */
+html {
+    --vermelho-claro: #df1c26;
+    --vermelho-escuro: #92171e;
+    --cinza-escuro: #161616;
+    --cinza: #dadada;
+}
+
+/* ESTILIZAÇÃO GERAL (*) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Incluindo contéudo, preenchimento e borda a altura e largura */
+}
+
+/* ESTILIZANDO O CORPO DO SITE */
+body {
+    font-family: 'Poppins';
+    color: var(--cinza);
+    display: grid;
+    /* divisao do corpo em dois espaços */
+    grid-template-columns: 1fr 1fr;
+    /* definindo o tamanho das divisões */
+    background: url(../img/fundo-login.png);
+}
+
+/* CONFIGURANDO OS ELEMENTOS DO LOGIN/CADASTRO */
+.conteiner-esquerdo {
+    background-color: rgba(0, 0, 0, 0.674);
+    height: 100vh;
+    display: flex;
+    /* deixar layout do elemento flexivel  */
+    flex-direction: column;
+    /* Elementos dentro da classe serão organizados em coluna */
+    align-items: center;
+    /* Elementos dentro da classe serão centralizados verticalmente */
+    justify-content: flex-end;
+    /* Elementos dentro do elemento dessa classe serão ajustados horizontalmente no fim da classe */
+}
+
+/* BOLA VERMELHA */
+.bola-vermelha4 {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: var(--vermelho-escuro);
+    position: absolute;
+    /* algum elemento irá sobrepor esse elemento */
+    top: 13rem;
+    /* distancia em cima */
+    left: 20rem;
+    /* distancia embaixo */
+}
+
+/* IMAGEM DA TELA DE CADASTRO E LOGIN*/
+img.imagem-mulher {
+    height: 77.5vh;
+    z-index: 1;
+    /* prioridade de exibição para a imagem, sobreposição */
+}
+
+/* ICONE 'CASA' */
+.imagem-voltar {
+    margin: 0.5rem;
+    /* MARGEM: espaço fora do elemento */
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    /* algum elemento irá sobrepor esse elemento */
+    left: 0.5rem;
+    /* distancia em cima */
+    top: 0.5rem;
+    /* distancia embaixo */
+}
+
+/* FORMULARIO DE LOGIN/CADASTRO */
+.conteiner-direito form {
+    background-color: var(--cinza-escuro);
+    height: 100vh;
+    display: flex;
+    /* deixar layout do elemento flexivel  */
+    flex-direction: column;
+    /* Elementos dentro da classe serão organizados em coluna */
+    align-items: center;
+    /* Elementos dentro da classe serão centralizados verticalmente */
+    justify-content: center;
+    /* Elementos dentro da classe serão centralizados horizontalmente */
+}
+
+/*  ESTILIZANDO TITULO */
+.conteiner-direito h1 {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--vermelho-escuro);
+    letter-spacing: 0.1rem;
+    /* espaço entre as letras */
+    width: 62.5%;
+    font-size: 2.8rem;
+}
+
+/* BUTAO */
+.inputs {
+    width: 100%;
+}
+
+.conteiner-direito .inputs {
+    display: flex;
+    /* deixar layout do elemento flexivel  */
+    flex-direction: column;
+    /* Elementos dentro da classe serão organizados em coluna */
+}
+
+/* ESTILIZANDO O PARÁGRAFO ´BEM-VINDO´ */
+.p-bem-vindo {
+    width: 62.5%;
+    font-size: 1.2rem;
+    color: #777777;
+    margin: 1rem 0rem 3rem 0rem;
+    /* espaço fora - cima, direita, baixo, esquerda */
+}
+
+/* AMPLIANDO O TAMANHOS DOS INPUTS DA PG DE LOGIN E CADASTRO */
+.ampliando-container-inputs {
+    width: 62.5%;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* CHAMANDO A CLASSE P-CRIAR CONTA PARA ESTILIZAR */
+.p-criar-conta {
+    color: #777777;
+    padding: 0.5rem 0;
+    /* espaço dentro - cima,baixo e direta,esquerda */
+    text-align: center;
+}
+
+/* DEIXANDO O CONTEÚDO DO SPAN (NEXUS GYM) VERMELHO */
+.conteiner-direito span {
+    color: var(--vermelho-escuro);
+
+}
+
+
+/* ESTILIZANDO OS INPUTS DA PG DE CADASTRO */
+.estilo-input {
+    padding: 1.25rem 1rem;
+    /* espaço de dentro - cima,baixo e esq,dir */
+    margin-bottom: 2rem;
+    width: 100%;
+    border: 3px solid #4A4A4A;
+    /* borda: altura, tipo e cor*/
+    border-radius: 7.5px;
+    font-size: 16px;
+    color: #ffffff;
+    outline: none;
+    /* sem contorno - borda especial do input */
+    background-color: transparent;
+    /* fundo transparente */
+    transition: all .2s ease;
+    /* transição em tudo de 2 segundos*/
+    text-align: end;
+    /* alinhando texto ao final do elemento horizontalmente*/
+    display: flex;
+    /* deixar layout flexivel para manipulação */
+    flex-direction: row;
+    /* Elementos dentro da classe serão organizados em coluna linha */
+    align-items: center;
+    /* centralizando elementos dentro de classe verticalmente */
+}
+
+/* ESTLIZANDO O PREENCHIMENTO AUTOMÁTICO DOS INPUTS DE TEXTO  */
+.estilo-input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--cinza);
+}
+
+/* ESTILIZANDO O PRIMEIRO FILHO DA CLASSE 'ESTILO INPUT' OBS: NTH-OF-TYPE É UM PSEUDO CLASSE */
+.estilo-input:nth-of-type(1) {
+    background-image: url('../img/user.svg'); 
+    background-repeat: no-repeat; /* não repetir imagem de fundo */
+    background-position-y: 10.5px;
+    background-position-x: 5.5px;
+    background-size: 2.25rem;
+}
+
+/* ESTILIZANDO O SEGUNDO IRMAO DE CLASSE 'ESTILO INPUT' OBS: NTH-OF-TYPE É UM PSEUDO CLASSE */
+.estilo-input:nth-of-type(2) {
+    background-image: url('../img/cadeado-vermelho.png');
+    background-repeat: no-repeat; /* não repetir imagem de fundo */
+    background-position-y: 10.5px;
+    background-position-x: 5.5px;
+    background-size: 2.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* DEIXANDO O INPUT DE TEXTO VERMELHO AO SER FOCADO/CLICADO */
+.estilo-input:focus {
+    border-color: var(--vermelho-claro);
+    box-shadow: 0 0 0 0.2rem var(--vermelho-escuro);
+}
+
+/* ESTILIZANDO O NOME DENTRO DO INPUT  */
+.estilo-input::placeholder {
+    padding-left: 2.25rem;
+    text-align: start;
+    font-size: 1.5rem;
+    position: relative;
+    top: 2.75px;
+    color: #5F5F5F;
+}
+
+/* ELTILIZANDO A CLASSE LEMBRAR */
+
+.lembrar {
+    width: 100%;
+}
+
+/* ESTILIZANDO O PARÁGRAFO LEMBRAR */
+.lembrar p {
+    color: #777777;
+    font-size: 18px;
+    margin-left: 0.5rem;
+}
+
+/* POSICIONANDO O CONTEÚDO DO LABEL  */
+.conteudo-checkbox {
+    display: flex; /* */
+    flex-direction: row; /* */
+    align-items: center; /* */
+    position: relative; /* */
+    cursor: pointer; /* */
+    font-size: 20px;
+}
+
+/* POSICIONANDO O INPUT DO CHECKBOX */
+.conteudo-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* ESTILIZANDO O VEZINHO  */
+.checkmark {
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--vermelho-escuro);
+    border-radius: 10%;
+
+}
+
+/*  */
+.conteudo-checkbox input:checked~.checkmark {
+    background-color: var(--vermelho-escuro);
+}
+
+.checkmark:after {
+    content: ""; /* */
+    position: absolute;
+    display: none;
+}
+
+.conteudo-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.conteudo-checkbox .checkmark:after {
+    left: 0.30rem;
+    top: 0.55rem;
+    width: 0.15em;
+    height: 0.3em;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
+
+
+.conteiner-direito a {
+    color: var(--vermelho-claro);
+    text-decoration: none;
+    /* tirar sublinhado */
+}
+
+.conteiner-direito a:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--vermelho-escuro);
+    color: var(--cinza);
+    border-radius: 5px;
+    padding: 1.2rem;
+    width: 100%;
+    cursor: pointer; /* */
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.56);
+    font-family: inherit; /* */
+    font-size: 15px;
+    transition: all .2s ease; /* */
+
+}
+
+input[type="submit"]:hover {
+    background-color: var(--vermelho-claro);
+    transform: scale(1.015);
+}
+
+/* CADASTRO */
+
+.cadastro .estilo-input {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.cadastro .estilo-input:nth-of-type(1),
+.cadastro .estilo-input:nth-of-type(2) {
+    background-image: url('../img/user.svg');
+    background-repeat: no-repeat;
+    background-position: 8px; /* */
+    background-size: 1.8rem; 
+}
+
+.cadastro .estilo-input:nth-of-type(3),
+.cadastro .estilo-input:nth-of-type(4) {
+    background-image: url('../img/cadeado-vermelho.png');
+    background-repeat: no-repeat;
+    background-position: 8px; /* */
+    background-size: 1.8rem;
+}
+
+.cadastro .estilo-input:nth-of-type(4) {
+    margin-bottom: 2rem;
+}

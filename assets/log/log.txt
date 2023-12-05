@@ -1,0 +1,22 @@
+2023-12-03 01:30:29
+Array
+2023-12-03 01:39:41
+Array
+2023-12-03 01:41:20
+Array
+2023-12-03 01:42:21
+ERRO: Array
+2023-12-03 01:43:13
+ERRO: Array
+2023-12-03 01:46:29
+ERRO: Array
+2023-12-03 01:47:40
+ERRO: Array
+2023-12-03 01:48:32
+00000 -  - 
+2023-12-03 23:40:40
+Erro ao tentar conectar: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2023-12-03 23:40:41
+Erro ao tentar conectar: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2023-12-03 23:40:42
+Erro ao tentar conectar: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente

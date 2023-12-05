@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato:wght@900&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
+
+/* IMPORTAÇÃO DE FONTE VIA URL */
+
+@font-face {
+    font-family: 'king_and_queen';
+    src: url(/assets/font/LTCushion-Bold.ttf) format('truetype');
+    /* IMPORTAÇÃO DE FONTE VIA DOWNLOAD, ARMAZENADA NOS ARQUIVOS DO SITE */
+}
+
+html {
+    --preto: #000000;
+    --cinza: #aaaaaa;
+    --cinza-escuro: #161616;
+    --vermelho-claro: #df1c26;
+    --vermelho-escuro: #92171e;
+    --branco: #FFFFFF;
+    --branco-escuro: #dadada;
+
+    /* Rolagem Suave */
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    color: var(--branco-escuro);
+    background: url('../img/fundo.png') repeat;
+    width: 100%;
+}
+
+/* ALTERANDO BARRA DE ROLAGEM DO CORPO */
+
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+/* Barra de fundo */
+::-webkit-scrollbar-track {
+    background-color: rgb(64, 64, 64);
+}
+
+/* Barra que arrasta */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(96, 96, 96);
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(112, 112, 112);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(128, 128, 128);
+}
+
+/* MAIN - ENVOLVE TODAS AS SECTIONS */
+
+main {
+    margin-top: 6vh;
+}
+
+
+.section {
+    padding: 3rem 10rem;
+    /* CADA SECTION E A BARRA DE NAV DEVE SEGUIR ESSE PADRÃO */
+}
+
+/* BARRA DE NAVEGAÇÃO */
+.nav-bar {
+    color: var(--branco);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--cinza-escuro);
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+.nav-bar ul {
+    display: flex;
+    list-style: none; /* */
+    flex-flow: row; /* */
+}
+
+
+/* ELEMENTOS NA BARRA DE NAVEGAÇÃO */
+
+
+.logo {
+    /* referencia a logo na barra de navegação */
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    /* referencia ao h1 na barra de navegação */
+    font-family: 'king_and_queen';
+    font-size: 3.5rem;
+    color: var(--branco);
+    font-weight: 800;
+    text-shadow: 0px 0px 5px;
+}
+
+.logo img {
+    /* referencia a imagem logo na barra de navegação */
+    height: 10vh;
+
+}
+
+/* BARRA DE NAVEGAÇÃO - BOTÕES */
+.navegacao {
+    display: flex;
+    gap: 4rem; /* */
+    align-items: center;
+}
+
+.nav-item {
+    padding: 2rem;
+
+}
+
+.nav-item a {
+    position: relative; /* */
+    font-weight: 600;
+}
+
+.nav-item a::after {
+    content: ''; /* */
+    position: absolute; /* */
+    bottom: -0.5rem;
+    left: 0;
+    height: 0.2rem;
+    width: 0;
+    background: var(--vermelho-claro);
+   transition: all .3s ease-in-out; 
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.nav-item a:hover {
+    color: var(--branco);
+} 
+
+.nav-bar a {
+    text-decoration: none;
+    color: var(--branco-escuro);
+}
+
+/* BOTAO AREA DE CLIENTE  */
+.caixa-area-cliente a {
+    background-color: var(--vermelho-escuro);
+    border-radius: 15px 0;
+    padding: 0.8rem;
+    border: 3px solid transparent;
+}
+
+.caixa-area-cliente a:hover {
+    background-color: var(--vermelho-claro);
+
+}
+
+.caixa-area-cliente a:hover::after {
+    display: none;
+}
+
+/* INTRO - PRIMEIRA SECTION */
+.intro {
+    background-color: var(--preto);
+    height: 70vh;
+    display: grid; /*layout grid */
+    grid-template-columns: 60% 40%;  /* cria duas colunas*/
+
+}
+
+.img-intro {
+    position: relative;
+    display: flex; /* modo como o elemento se comporta */
+   justify-content: center;  /* Alinha o eixo principal do elemento */
+}
+
+.img-intro img {
+    position: relative;
+     bottom: -1.15rem; /* Coloca a imagem abaixo da sua posição inicial */
+     z-index: 1; /* Ordem de sobreposição */
+     transform: scale(1.1);/*Aumentando a escala da imagem  */
+}
+
+.esquerda-intro {
+    display: flex;
+     flex-flow: column wrap; /* 1 valor = direção dos elementos 2 valor= caso passe do tamanho da tela o elemento se quebra */
+    justify-content: space-around;
+}
+
+.bola-vermelha {
+    position: absolute;
+    background: var(--vermelho-escuro);
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;  /* arredondamento do elemento */
+    top: 2rem;
+    left: 17.5%;
+}
+
+#slogan-home {
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-bottom: 0.75rem;  /*  Coloca uma margem embaixo */
+    font-weight: 900;/* Deixa em negrito */
+}
+
+
+#slogan-home span:nth-child(1) {
+   display: block;  /* Faz com que o elemento pegue 100% da tela */
+}
+
+#slogan-home span:nth-child(2) {
+    color: var(--vermelho-claro);
+    text-shadow: 0px 0px 10px var(--vermelho-escuro);
+}
+
+.divisor {
+    height: 0.3rem;
+    width: 20%;
+    background: var(--vermelho-claro);
+    margin-bottom: 2rem;
+}
+
+#slogan2-home {
+     font-size: initial; /*Deixa o tamanho padrão, caso seja inherit o elemento herdará as configurações do seu pai */
+    color: var(--cinza);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* Junte-se a nós */
+
+.junte-se a {
+    text-decoration: none;
+    color: var(--branco-escuro);
+}
+
+.junte-se p {
+    margin-top: 0.5rem;
+    background-color: var(--vermelho-escuro);
+    width: 10rem;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    font-size: 0.9em;
+}
+
+.junte-se p:hover {
+   filter: brightness(1.5); /* Deixa o elemento mais claro */
+    transform: scale(1.025);
+}
+
+
+
+.junte-se p::after {
+    display: none;
+}
+
+/* --- */
+
+.apresentacao-de-titulos {
+    display: flex;
+
+}
+
+ .apresentacao-de-titulos .apresentacao-de-titulos-item:not(:nth-child(3)) { /* Configurando todos os filhos de 'aprentação de titulos item' menos o filho 3 */
+    border-right: 1px solid var(--cinza-escuro);
+}
+
+.apresentacao-de-titulos .apresentacao-de-titulos-item {
+    color: var(--cinza);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apresentacao-de-titulos .apresentacao-de-titulos-item .font-size-grande {
+    color: var(--branco);
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+.apresentacao-de-titulos .apresentacao-de-titulos-item:nth-child(1) {
+    align-items: start;
+}
+
+.apresentacao-de-titulos .apresentacao-de-titulos-item:nth-child(1) .font-size-grande {
+    padding-left: 0;
+}
+
+.apresentacao-de-titulos .apresentacao-de-titulos-item:nth-child(3) {
+    padding-left: 1rem;
+}
+
+.apresentacao-de-titulos .apresentacao-de-titulos-item span {
+    color: var(--vermelho-escuro);
+}
+
+/* Segunda SECTION */
+
+.segunda-section {
+    margin-top: 8vh;
+    text-align: left;
+}
+
+.segunda-section img {
+    height: 30rem;
+}
+
+.caixa-sobre-nos>h1 {
+    font-size: 1.2rem;
+    text-transform: uppercase;  /*Deixa tudo em maiusculo  */
+    color: var(--vermelho-claro);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.caixa-sobre-nos>p {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-size: 2em;
+}
+
+.segunda-section hr {
+    width: 33rem;
+    box-shadow: 0 0.2px 5px white;
+    margin: 2rem 0;
+
+}
+
+.segunda-section span {
+    color: var(--vermelho-claro);
+}
+
+.alinhamento-vertical {
+    display: flex;
+    align-items: center;
+}
+
+.caixa-sobre-nos {
+    width: 90%;
+    display: flex;
+    flex-flow: column wrap; 
+    justify-content: center;
+
+}
+
+/* Classe pra alinhar itens no centro (do eixo perpendicular) */
+.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+/* Classe pra agrupar os itens no começo */
+.justify-content-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Classe pra alinhar itens no centro (do eixo principal) */
+.justify-content-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Classe pra agrupar os itens no final */
+.justify-content-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sobre {
+    background-color: var(--cinza-escuro);
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+}
+
+/* Terceira SECTION */
+
+.terceira-section {
+    background: var(--preto);
+    margin-top: 8vh;
+    height: 27.5rem;
+    transition: all .5s;
+    text-align: center;
+    padding-top: 2rem;
+
+}
+
+
+.terceira-section:hover {
+    height: 70vh;
+    transition: all .5s;
+}
+
+.terceira-section>h1 {
+    font-size: 1.2rem;
+    color: var(--vermelho-claro);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.terceira-section>p {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+
+.terceira-section .conteudo-terceira-section {
+    width: 25rem;
+    color: var(--vermelho-claro);
+    font-size: 5px;
+
+}
+
+.terceira-section>div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.conteudo-terceira-section p {
+    padding-top: 1rem;
+    line-height: 1;
+    font-size: 2em;
+    color: var(--vermelho-claro);
+    text-align: center;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cinza-escuro);
+    transition: all .5s;
+
+}
+
+.card .img {
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    transition: all .5s;
+    z-index: 2;
+    position: relative;
+    opacity: .8;
+
+}
+
+#img-1 {
+    background-image: url('../img/cardio1.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+#img-2 {
+    background-image: url('../img/natacao1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#img-3 {
+    background-image: url('../img/boxe1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#img-4 {
+    background-image: url('../img/musculacao1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card .img span {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: italic;
+    transition: all .5s;
+    background-color: #92171de0;
+    border-radius: 30px;
+    padding: 4px;
+}
+
+.card:hover .img {
+    width: 430px;
+    opacity: 1;
+}
+
+.card:hover .img span {
+    font-size: 28px;
+}
+
+.card .span {
+    padding: 0px 20px;
+    height: 0;
+    opacity: 0;
+    transition: all .5s;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(30px);
+}
+
+.card:hover .span {
+    height: 260px;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .span p {
+    margin: 0;
+    font-size: 5rem;
+}
+
+.card .span .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--vermelho-claro);
+}
+
+.card .span .desc {
+    font-size: 1rem;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8px;
+    color: var(--branco);
+}
+
+.card .titulo span {
+    font-size: 24px;
+    color: var(--vermelho-claro);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+
+}
+
+/* Quinta SECTION */
+.quinta-section {
+    background: var(--preto);
+    margin-top: 8vh;
+    text-align: center;
+    width: 100%;
+    height: 75vh;
+    padding-top: 2rem;
+    font-weight: 600;
+}
+
+.quinta-section>h1 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--vermelho-claro);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.quinta-section>p {
+    font-size: 2rem;
+}
+
+.plano-card {
+    margin: 2.5rem 0rem 0rem 2rem;
+    background-color: #141414;
+    width: 18%;
+    display: inline-block;
+    height: 32rem;
+    overflow: hidden;
+    transition: transform 0.2s;
+    position: relative;
+    border-radius: 3px;
+}
+
+/* Aumenta a caixa de tamanho ao passar o mouse (o efeito suave vem do transition da classe .plano-card) */
+.plano-card:hover {
+    transform: scale(1.1);
+}
+
+.bola-vermelha2 {
+    background-color: #981c24;
+    width: 27rem;
+    height: 27rem;
+    border-radius: 100%;
+    position: absolute;
+    top: -17.5rem;
+    left: -2.8rem;
+    z-index: 2;
+}
+
+.titulo-quinta-section {
+    text-align: center;
+    padding: 0.4rem;
+}
+
+.titulo-quinta-section>h2,
+.titulo-quinta-section>h3,
+.titulo-quinta-section>p {
+    font-weight: 900;
+}
+
+.titulo-quinta-section>h2 {
+    color: var(--vermelho-claro);
+    margin-top: 1rem;
+}
+
+.titulo-quinta-section>h3 {
+    font-size: 30px;
+}
+
+.titulo-quinta-section>h3>span {
+    font-size: initial;
+    color: var(--branco-escuro);
+    margin-right: 0.2rem;
+}
+
+.titulo-quinta-section>p {
+    font-size: 0.8rem;
+}
+
+
+/* Titulo do Card Principal (do MEIO)*/
+#tituloprincipal-quinta-section {
+    position: relative;
+    padding: 0.4rem;
+    margin-top: 1rem;
+    z-index: 3;
+}
+
+#tituloprincipal-quinta-section>h3 {
+    font-size: 30px;
+}
+
+#tituloprincipal-quinta-section>h3>span {
+    font-size: initial;
+    color: var(--branco-escuro);
+    margin-right: 0.2rem;
+}
+
+#tituloprincipal-quinta-section>p {
+    font-size: 0.8rem;
+}
+
+#tituloprincipal-quinta-section>p,
+#tituloprincipal-quinta-section>h3,
+#tituloprincipal-quinta-section>h2 {
+    color: var(--branco);
+    font-weight: 900;
+}
+
+/* Espaçamento da div do conteúdo */
+.conteudo-quinta-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 24rem;
+}
+
+/* Espaçamento dos p */
+.conteudo-quinta-section p {
+    margin: 0 auto;
+    padding: 0.2rem 0.5rem;
+    width: 75%;
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--branco-escuro);
+}
+
+.conteudo-quinta-section span {
+    color: var(--vermelho-claro);
+    margin-right: 0.5rem;
+
+}
+
+/* Botões */
+#btn-1,
+#btn-2,
+#btn-3 {
+    background-color: var(--vermelho-escuro);
+    color: rgb(255, 255, 255);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    bottom: -0.5rem;
+}
+
+#btn-1:hover,
+#btn-2:hover,
+#btn-3:hover {
+    background-color: rgb(180, 33, 43);
+}
+
+/* Quarta section */
+
+.quarta-section {
+    background: var(--cinza-escuro);
+    margin-top: 8vh;
+    height: 70vh;
+    transition: all .5s;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.esquerda-quarta-section img {
+    transform: scale(1.23);
+    z-index: 3;
+    position: relative;
+    bottom: -1.645rem;
+}
+
+.bola-vermelha3 {
+    background-color: var(--vermelho-escuro);
+    width: 24rem;
+    height: 24rem;
+    border-radius: 100%;
+    position: absolute;
+    left: 23%;
+    top: 7%;
+    z-index: 2;
+}
+
+.esquerda-quarta-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.direita-quarta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.direita-quarta-section h2 {
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 800;
+
+}
+
+.item-direita-quarta-section {
+    margin: 1.5rem 0rem;
+}
+
+.item-direita-quarta-section:first-of-type {
+    margin-top: 2rem;
+}
+
+
+.item-direita-quarta-section img {
+    height: 32px;
+    width: 32px;
+}
+
+.item-direita-quarta-section p {
+    color: var(--cinza);
+    font-size: 0.8rem;
+}
+
+
+/* FOOTER */
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+
+}
+
+footer .conteudo-footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    background-color: #000000c3;
+    width: 60%;
+    padding-left: 8rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    border-radius: 1rem;
+}
+
+footer .conteudo-footer ul {
+    width: 25%;
+    list-style: none;
+}
+
+footer .conteudo-footer a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+footer .conteudo-footer a:hover {
+    color: var(--vermelho-claro);
+    text-decoration: underline;
+}
+
+.conteudo-footer img {
+    height: 6rem;
+}
+
+.conteudo-footer ul li {
+    text-align: left;
+}
+
+.conteudo-footer ul:nth-child(2) li:nth-child(1) {
+    margin-left: 2rem;
+    height: 9.5rem;
+}
+
+.conteudo-footer h3 {
+    font-family: king_and_queen;
+    color: var(--vermelho-claro);
+    margin-bottom: 0.75rem;
+}
+
+.conteudo-footer h2 {
+    font-family: king_and_queen;
+    color: var(--vermelho-claro);
+    margin-left: 1rem;
+    margin-top: -2rem;
+}
+
+
+.card .span .desc::-webkit-scrollbar {
+    width: 12px;
+}
+
+.card .span .desc::-webkit-scrollbar-track {
+    background: var(--cinza);
+}
+
+.card .span .desc::-webkit-scrollbar-thumb {
+    background-color: var(--vermelho-escuro);
+}
