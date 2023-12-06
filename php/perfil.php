@@ -6,7 +6,7 @@ require_once 'conexao.php';
 session_start();
 
 //Verificando se o usuário está logado
-if (($_SESSION['logado'] === true)):
+if($_SESSION['logado'] === true):
 
     //Obtendo o ID do usuário
     $id = $_SESSION['id'];
@@ -20,10 +20,11 @@ if (($_SESSION['logado'] === true)):
     $perfil = $dados_perfil->fetch(PDO::FETCH_OBJ);
 
     //Atualizando a sessão com os dados do perfil do usuário
-    foreach ($perfil as $indice => $valor) {
+    foreach($perfil as $indice => $valor) {
         $_SESSION["$indice"] = $valor;
     }
     ?>
+
     <!DOCTYPE html>
     <html lang="pt-br">
 
@@ -94,7 +95,7 @@ else:
 endif;
 
 //Verificando se o botão "Apagar Conta" foi clicado
-if (isset($_POST['apagar'])) {
+if(isset($_POST['apagar'])) {
 
     //Obtendo o ID do usuário
     $id = $_SESSION['id'];
@@ -108,7 +109,7 @@ if (isset($_POST['apagar'])) {
         //Redirecionando o usuário para a página inicial
         header("Location: logout.php");
     } catch (PDOException $error) {
-        log_txt("Erro ao deletar: " . $error->getMessage());
+        log_txt("Erro ao deletar: ".$error->getMessage());
         echo "<script>
         alert('Erro ao deletar!');
     </script>";
@@ -116,7 +117,7 @@ if (isset($_POST['apagar'])) {
 }
 
 $alterado = false;
-if (isset($_POST['alterar'])) {
+if(isset($_POST['alterar'])) {
     $senha = password_hash(
         $_POST['senha'],
         PASSWORD_DEFAULT
@@ -130,13 +131,13 @@ if (isset($_POST['alterar'])) {
         $alterar->execute();
         $alterado = true;
     } catch (PDOException $error) {
-        log_txt("Erro ao alterar dados: " . $error->getMessage());
+        log_txt("Erro ao alterar dados: ".$error->getMessage());
         echo "<script>
         alert('Erro ao alterar dados!');
     </script>";
     }
 }
-if ($alterado) {
+if($alterado) {
     echo "<script>
                 alert('SENHA ALTERADA COM SUCESSO')
             </script>";

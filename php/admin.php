@@ -3,9 +3,9 @@
 require 'conexao.php';
 
 session_start();
-if (($_SESSION['id'] === 0)) :
+if($_SESSION['id'] === 0):
 
-?>
+    ?>
     <!DOCTYPE html>
     <html lang="pt-br">
 
@@ -41,10 +41,15 @@ if (($_SESSION['id'] === 0)) :
                 padding: 1rem;
                 background-color: var(--vermelho-claro);
             }
-            th,td,tr{
+
+            th,
+            td,
+            tr {
                 border: 1px solid var(--vermelho-claro);
             }
-            td,tr{
+
+            td,
+            tr {
                 background-color: var(--vermelho-escuro);
             }
         </style>
@@ -63,8 +68,8 @@ if (($_SESSION['id'] === 0)) :
     </html>
 
 
-<?php
-else :
+    <?php
+else:
     header("Location: login.php");
 endif;
 ?>

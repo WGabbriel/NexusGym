@@ -6,8 +6,9 @@ require_once 'conexao.php';
 session_start();
 
 //Verificando se o usuário está logado
-if (($_SESSION['logado'] === true)) :
-?>
+if($_SESSION['logado'] === true):
+
+    ?>
 
     <!DOCTYPE html>
     <html lang="pt-BR">
@@ -24,7 +25,8 @@ if (($_SESSION['logado'] === true)) :
     <body>
         <!-- Cabeçalho da página com o logo, título e ícones de perfil e logout -->
         <nav>
-            <a href="pagina_inicial.php"><img src="../assets/img/logo.svg" alt="logo de um lobo vermelho" style="height: 5rem; width: 5rem;"></a>
+            <a href="pagina_inicial.php"><img src="../assets/img/logo.svg" alt="logo de um lobo vermelho"
+                    style="height: 5rem; width: 5rem;"></a>
             <h1>NEXUS </h1>
             <div class="icones-direita">
                 <a href="perfil.php"><img src="../assets/img/icon-user-branco.png" alt="" class="icone-user"></a>
@@ -115,9 +117,9 @@ if (($_SESSION['logado'] === true)) :
     </body>
 
     </html>
-<?php
-//Se o usuário não estiver logado, redireciona para a página de login
-else :
+    <?php
+    //Se o usuário não estiver logado, redireciona para a página de login
+else:
     header("Location: login.php");
 endif;
 ?>

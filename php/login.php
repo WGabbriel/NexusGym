@@ -33,21 +33,24 @@
             <div class="ampliando-container-inputs">
                 <div class="inputs">
                     <!-- Campos de entrada para matrícula e senha -->
-                    <input type="text" name="matricula" placeholder="Matrícula" class="estilo-input" pattern="[0-9]{11}" required value="<?php if (isset($_COOKIE['matricula'])) {
-                                                                                                                                                echo $_COOKIE['matricula'];
-                                                                                                                                            } ?>">
+                    <input type="text" name="matricula" placeholder="Matrícula" class="estilo-input" pattern="[0-9]{11}"
+                        required
+                        value="<?php if(isset($_COOKIE['matricula'])) {
+                            echo $_COOKIE['matricula'];
+                        } ?>">
 
-                    <input type="password" name="senha" placeholder="Senha" class="estilo-input" required minlength="8" value="<?php if (isset($_COOKIE['senha'])) {
-                                                                                                                                    echo $_COOKIE['senha'];
-                                                                                                                                } ?>">
+                    <input type="password" name="senha" placeholder="Senha" class="estilo-input" required minlength="8"
+                        value="<?php if(isset($_COOKIE['senha'])) {
+                            echo $_COOKIE['senha'];
+                        } ?>">
                 </div>
 
                 <!-- Opção de lembrar dados -->
                 <div class="lembrar">
                     <label class="conteudo-checkbox">
-                        <input type="checkbox" <?php if (isset($_COOKIE['matricula']) && isset($_COOKIE['senha'])) {
-                                                    echo 'checked';
-                                                } ?>>
+                        <input type="checkbox" <?php if(isset($_COOKIE['matricula']) && isset($_COOKIE['senha'])) {
+                            echo 'checked';
+                        } ?>>
                         <div class="checkmark"></div>
                         <p>Lembrar meus dados </p>
                     </label>
@@ -65,7 +68,7 @@
 
 <?php
 // Início da lógica de login ao receber o formulário enviado
-if (isset($_POST['login'])) {
+if(isset($_POST['login'])) {
     // Inclui arquivos necessários
     require 'conexao.php';
 
@@ -79,7 +82,7 @@ if (isset($_POST['login'])) {
     $matricula = $_POST['matricula'];
     $senha = $_POST['senha'];
 
-    if ($matricula == '00000000000' && $senha == 12345678){
+    if($matricula == '00000000000' && $senha == 12345678) {
         $_SESSION['id'] = 0;
 
         header("location: admin.php");
@@ -91,19 +94,19 @@ if (isset($_POST['login'])) {
     $dados->execute();
 
     // Verifica se a matrícula existe no banco de dados
-    if ($dados->rowCount() > 0) {
+    if($dados->rowCount() > 0) {
         // Obtém a senha do banco de dados
         $db_senha = $dados->fetchAll(PDO::FETCH_OBJ);
 
-        foreach ($db_senha as $usuario) {
+        foreach($db_senha as $usuario) {
             // Verifica se a senha fornecida corresponde à senha do banco de dados
-            if (password_verify($senha, $usuario->senha)) {
+            if(password_verify($senha, $usuario->senha)) {
                 // Define a flag de login como true e armazena o ID do usuário na sessão
                 $_SESSION['logado'] = true;
                 $_SESSION['id'] = $usuario->id;
 
                 // Verifica se a opção "lembrar dados" está marcada e configura cookies
-                if (isset($_POST['lembrar'])) {
+                if(isset($_POST['lembrar'])) {
                     setcookie('matricula', $matricula);
                     setcookie('senha', $senha);
                 } else {
