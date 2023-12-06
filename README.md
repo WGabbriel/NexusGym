@@ -5,5 +5,5 @@
 - [Wallace Gabriel](https://github.com/WGabbriel)
 - [Lethícia Almeida](https://github.com/yLeehsz014)
 - [Felipe dos Santos](https://github.com/Felps1z)
-- [Clara Amanda](#)
-- [Maria Alice](#)
+- [Clara Amanda](https://www.instagram.com/cla.mz/)
+- [Maria Alice](https://www.instagram.com/alice._.malb/)

@@ -19,7 +19,7 @@ try {
 
         try {
             // Cria o banco de dados se não existir
-            $conexao = new PDO('mysql:host=localhost', 'root', '');
+            $conexao = new PDO("mysql:host=$host", $user, $password);
             $conexao->exec("CREATE DATABASE IF NOT EXISTS projeto");
 
             // Conecta ao banco de dados criado ou existente
